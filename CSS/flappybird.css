@@ -13,7 +13,7 @@ header {
     background: rgba(90, 145, 8, 0.8);
     padding: 0 0px; 
     display: flex;
-    justify-content: flex-end; /* Justerer plassering til høyre */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -108,7 +108,7 @@ header nav ul li {
 }
 
 #board {
-    background-image: url(./Bilder/flappybirdbg.png);
+    background-image: url(../Bilder/flappybirdbg.png);
     margin: 100px 0;
     border: solid rgb(28, 65, 28) 2px;
 }
