@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="../CSS/flappybird.css">
+    <script src="../JS/flappybird_hard.js"></script>
+    <script src="https://kit.fontawesome.com/0577754c0a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="btns">
+        <a href="../index.html"><button class="home"><i class="fa-solid fa-house fa-2x"></i></button></a>
+        <button class="menu"><i class="fa-solid fa-gear"></i></button>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="menu-item">LEVEL</a>
+                    <div class="submenu"><a href="flappybird_hard.html">Press here to play the super-hard version</a></div>
+                </li>
+                <li>
+                    <a href="about.html" class="menu-item">ABOUT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <canvas id="board"></canvas>
+<!--     <audio id="backgroundMusic" src="background_music.mp3"></audio>
+    <audio id="point "src="point.mp3" controls></audio> -->
+
+    <footer>
+        <h4>IT-project</h4>
+        <p>Created by Solveig og Mariann</p>
+        <p>Inspiration is taken from this <a href="https://www.youtube.com/watch?v=jj5ADM2uywg&t=2s">Youtube-video</a> and the visual part of the game is made by pictures downloaded from the github-repository linked in the video.</p>
+    </footer>  
+
+    <script>
+        let btn = document.querySelector('.menu')
+
+        document.addEventListener("DOMContentLoaded", function() {
+        let menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                let submenu = this.nextElementSibling;
+                toggleSubmenu(submenu);
+            });
+        });
+
+        function toggleSubmenu(submenu) {
+            let current = document.querySelector('.show');
+            submenu.classList.toggle('show');
+            }
+        });
+
+        btn.onclick = function() {
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

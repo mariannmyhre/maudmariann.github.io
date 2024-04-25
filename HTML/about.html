@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0577754c0a.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <header>
+        <div class="btns">
+        <a href="../index.html"><button class="home"><i class="fa-solid fa-house fa-2x"></i></button></a>
+        <button class="menu"><i class="fa-solid fa-gear"></i></button>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="menu-item">LEVEL</a>
+                    <div class="submenu"><a href="flappybird_hard.html">Press here to play the super-hard version</a></div>
+                </li>
+                <li>
+                    <a href="about.html" class="menu-item">ABOUT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+  
+    
+
+    <main id="about">
+        <h1 id="aboutTitle">ABOUT</h1> 
+
+        <article id="aboutFlappybird">
+
+            <h3 class="flappybird-intro">Flappy Bird - the original game</h3>
+
+            <p>
+            "Flappy Bird," developed by Vietnamese game developer Dong Nguyen, is a mobile game from 2013. It is a side-scrolling game where players control a bird, guiding it through a series of green pipes without making contact with the pipes. Scoring is based on the number of pipes the player successfully navigates through. The bird character was repurposed from an earlier game Nguyen developed in 2012. Initially launched in May 2013, the game saw a dramatic rise in popularity by early 2014, becoming an unexpected hit.
+            </p>
+
+            <p>
+            While "Flappy Bird" faced mixed reviews, with some critics pointing out its challenging difficulty and similarities to other games, other reviewers found it addictive. By January 2014, it topped the charts as the most downloaded free game on the iOS App Store. At its peak, Nguyen reported that the game was generating $50,000 daily from ads and sales.
+            </p> 
+        
+            <p>
+            On February 10, 2014, "Flappy Bird" was removed from both the App Store and Google Play, after concerns over the game's addictive nature and the excessive time that users spent on it. This led to a frenzy where devices with the game pre-installed were sold at premium prices online. Following the game's removal, numerous similar apps surfaced, and both Apple and Google have removed games from their app stores for being too identical.
+            </p>
+            
+            <p>
+            In August 2014, Nguyen released "Flappy Birds Family," a new version of the game available exclusively on Amazon Fire TV. Additionally, Bay Tek Games launched a Flappy Bird arcade game under license.
+            </p>
+        </article>
+
+        <h3 class="aboutUs-intro">About us and our prosess developing this website</h3>
+
+        <article id="aboutUs">
+            <p>
+                Our names are Solveig and Mariann and this is our IT-project from April 2024.
+                We started developing a website dedicated to the game Flappy Bird four weeks ago. The history of Flappy Bird interests us, that is why we have chosen this game. Throughout the project, we have learned a great deal about web design and coding, reveling in the challenge of creating an interactive platform that could appeal to Flappy Bird enthusiasts. Our journey involved experimenting with various design aesthetics and functionalities, ensuring the site was user-friendly and informative. 
+            </p>
+
+            <img src="../Bilder/about_img.jpg" alt="Selfie of the producers" class="selfie">
+
+        </article>
+
+            <p id="conclusion">
+                The most challenging part of the prosess was probably writing the JavaScript code for the game itself and understanding it. To get a broader comprehension of the code, we explained the code to eachother several times, until we felt that we knew this code so well, that it could might as well have been us who invented the Flappy Bird game (but it is not!!). This was an early part of the prosess, so the last week have been used to make our website look proffesional, making adjustments in the Cascading Style Sheets (CSS). To sum up, there has been a great few weeks creating this website, improving our web development skills, and having a great time doing it.
+            </p>
+    </main>
+
+    <footer>
+        <h4>IT-project</h4>
+        <p>Created by Solveig og Mariann</p>
+        <p>Inspiration is taken from this <a href="https://www.youtube.com/watch?v=jj5ADM2uywg&t=2s">Youtube-video</a> and the visual part of the game is made by pictures downloaded from the github-repository linked in the video.</p>
+    </footer>
+
+    <script>
+        let knapp = document.querySelector('.menu')
+        let nav = document.querySelector('nav')
+
+        document.addEventListener("DOMContentLoaded", function() {
+        let menuItems = document.querySelectorAll('.menu-item')
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                let submenu = this.nextElementSibling
+                toggleSubmenu(submenu)
+            })
+        })
+
+    function toggleSubmenu(submenu) {
+        let current = document.querySelector('.show')
+        if (current) {
+            current.classList.remove('show')
+        }
+        submenu.classList.toggle('show')
+    }}) 
+
+    knapp.onclick = function() {
+        nav.classList.toggle('show');
+    }
+    </script>
+</body>
+</html>

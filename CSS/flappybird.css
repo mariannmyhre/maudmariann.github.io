@@ -1,0 +1,140 @@
+body {
+    font-family: "Amaranth", sans-serif;
+    text-align: center;
+    background-color: rgb(119, 176, 34, 0.8);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    min-height: 66px;
+    background: rgba(90, 145, 8, 0.8);
+    padding: 0 0px; 
+    display: flex;
+    justify-content: flex-end; /* Justerer plassering til høyre */
+    align-items: center;
+}
+
+.home {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-color: transparent; 
+    border: none; 
+    outline: none;
+    color: rgba(28, 31, 25, 0.8);
+    margin-left: 20px; 
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    list-style: none;
+    position: relative;  
+}
+
+header ul li a {
+    color: #bfe0b4;
+    font-size: 1.1rem;
+    font-family: "Amaranth", sans-serif;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li a:hover {
+    background: rgba(37, 54, 11, 0.8);
+}
+
+header nav {
+    position: absolute;
+    width: 30%;
+    top: 66px;
+    right: 10; /* Justerer plassering til høyre */
+    background-color: rgba(37, 54, 11, 0.8);
+    display: none; /* Legg til denne linjen for å skjule menyen som standard */
+    transition: transform 0.3s ease; /* Legg til en overgangseffekt */
+}
+
+header nav.show {
+    display: block; /* Legg til denne linjen for å vise menyen når klassen 'show' legges til */
+    transform: translateY(0); /* Legg til en glidende animasjon når menyen vises */
+}
+
+header nav ul li {
+    width: 100%;
+    text-align: end;
+}
+
+.menu {
+    color: rgba(28, 31, 25, 0.8);
+    font-size: 30px;
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; 
+    background-color: transparent; 
+    border: none; 
+    outline: none; 
+}
+
+.submenu {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#board {
+    background-image: url(./Bilder/flappybirdbg.png);
+    margin: 100px 0;
+    border: solid rgb(28, 65, 28) 2px;
+}
+
+footer {
+    background-color:rgb(77, 120, 12);
+    color: #ffffff9f;
+    display: grid;
+    grid-auto-flow: row;
+    text-align: start;
+    padding: 40px;
+}
+
+footer h4 {
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: #ffffff9f;
+}
+
+/* Media Query */
+
+@media (max-width: 450px) {
+    header nav ul {
+        padding: 0;
+        margin: 0;
+    }
+}
