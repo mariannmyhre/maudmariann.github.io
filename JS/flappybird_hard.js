@@ -54,16 +54,16 @@ window.onload = function(){
 
     // load images
     birdImg = new Image()
-    birdImg.src = "./Bilder/flappybird.png"
+    birdImg.src = "../Bilder/flappybird.png"
     birdImg.onload = function() {
         context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height)
     }
 
     topPipeImg = new Image()
-    topPipeImg.src = "./Bilder/toppipe.png"
+    topPipeImg.src = "../Bilder/toppipe.png"
 
     bottomPipeImg = new Image()
-    bottomPipeImg.src = "./Bilder/bottompipe.png"
+    bottomPipeImg.src = "../Bilder/bottompipe.png"
 
     requestAnimationFrame(update)
     setInterval(placePipes, 1500) //every 1.5 seconds
@@ -181,7 +181,7 @@ function moveBird(e) {
     }
 }
 function backtoStart(){
-    window.location.href = 'Gameover.html';
+    window.location.href = '../HTML/Gameover.html';
 }
 
 function detectCollision( a, b) {
