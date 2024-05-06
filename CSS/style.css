@@ -244,6 +244,19 @@ footer  a {
     margin: 20px 0;
 }
 
+/* .text2 h1{
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 100px;
+    margin: 0; 
+    color: #1b401c;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 7%;  
+} */
+
 .flappybird-intro{
     font-size: 1.5rem;
     padding-bottom: 10px;

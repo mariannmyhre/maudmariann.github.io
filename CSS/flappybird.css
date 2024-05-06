@@ -13,7 +13,7 @@ header {
     background: rgba(90, 145, 8, 0.8);
     padding: 0 0px; 
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Justerer plassering til høyre */
     align-items: center;
 }
 
